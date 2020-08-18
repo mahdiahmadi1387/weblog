@@ -1,2 +1,2 @@
 # weblog
-weblog django!!!
+weblog in django!!!
