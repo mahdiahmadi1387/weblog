@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 
 
@@ -8,5 +8,7 @@ def signup_view(request):
         if form.is_valid():
             form.save()
             # login
-    form = UserCreationForm()
+            return redirect('weblogapp:list')
+    else:
+        form = UserCreationForm()
     return render(request,'accounts/signup.html',{'form':form})

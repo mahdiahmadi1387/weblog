@@ -8,6 +8,7 @@
     <h1>sign up</h1>
     <form class="sait-form" action="/accounts/signup" method="post">
         {{form}}
+        {% csrf_token %}
         <input type="submit" value="submit!">
     </form>
 </body>
